@@ -1,5 +1,14 @@
+.wrapper {
+  margin: 0 auto;
+  padding: 1%;
+}
+
+.header__title {
+  text-align: center;
+}
+
 .table {
-  width: 100%;
+  min-width: 90vw;
   margin: 0 auto;
   border-collapse: separate;
   border-spacing: 0;
@@ -28,7 +37,6 @@
 }
 
 .table tbody td:first-child {
-  width: auto;
   text-align: left;
 }
 
@@ -48,7 +56,7 @@
 
 /*Header*/
 .table thead td {
-  font: bold 1.3em 'trebuchet MS', 'Lucida Sans', Arial;  
+  font: 1em 'trebuchet MS', 'Lucida Sans', Arial;  
   border-radius-topright: 10px;
   border-radius-topleft: 10px; 
   border-top-right-radius: 10px;
@@ -75,7 +83,7 @@
 }
 
 .form__input {
-  width: 90px;
+  width: 110px;
   border-radius: 7px;
 }
 
