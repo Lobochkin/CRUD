@@ -37,11 +37,12 @@ if (isset($_POST['button_edit'])) {
 }
 // Добавление в БД
 if (isset($_POST['button_add'])) {
-  $insert = $mysqli->query("INSERT INTO cars SET brand='".clear_text($_POST['brand'])."',model='".clear_text($_POST['model'])."',price=".intval($_POST['price']).",id_status=(SELECT status.id FROM status WHERE status.status='".clear_text($_POST['status'])."'),mileage=".intval($_POST['mileage'])."");
+  $insert = $mysqli->query("INSERT INTO cars SET brand='".clear_text($_POST['brand'])."',model='".clear_text($_POST['model'])."',price=".intval($_POST['price']).",id_status=".intval($_POST['status']).",mileage=".intval($_POST['mileage'])."");
   if ($insert) {
     header("Location: " . "/test/CRUD");
     exit;
   }
+  
   if (!$insert) {
     die('Ошибка : ('. $mysqli->error .') '. $mysqli->errno);
   }

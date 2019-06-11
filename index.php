@@ -36,7 +36,7 @@ include_once('main.php');
                   <select class="form__input" name="status" required>
                     <option selected disabled>Статус</option>
                     <? while ($status = $list_status->fetch_assoc()) :?>
-                    <option><?=$status['status']?></option>
+                    <option value="<?=$status['id']?>"><?=$status['status']?></option>
                     <?endwhile?>
                   </select>
                 </td>
